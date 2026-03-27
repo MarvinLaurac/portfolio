@@ -16,8 +16,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://marvinlaurac.com"),
-  title: "Marvin Laurac — Développeur & Veille IA",
-  description: "Moins de tâches manuelles. Plus de valeur humaine.",
+  title: "Marvin Laurac — Le monde de demain",
+  description: "Le monde de demain.",
 };
 
 export default function RootLayout({
