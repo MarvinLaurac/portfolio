@@ -21,7 +21,7 @@ export default function Home() {
       <Header />
       <main className="min-h-screen">
         {/* Illustration juste sous le header */}
-        <div className="w-full px-3 sm:px-4 pt-20 sm:pt-24 max-w-6xl mx-auto">
+        <div className="w-full px-3 sm:px-4 pt-24 sm:pt-28 max-w-6xl mx-auto">
           {/* Mobile illustration (vertical) */}
           <Image
             src="/images/outils-agents-mobile.svg"
