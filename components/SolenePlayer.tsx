@@ -135,7 +135,6 @@ export default function SolenePlayer({ text }: SolenePlayerProps) {
       if (!cancelledRef.current) {
         clearTimer();
         setProgress(100);
-        setChunkInfo("");
         setTimeout(() => { setProgress(0); setState("idle"); }, 500);
         ctx.close();
         ctxRef.current = null;
