@@ -124,7 +124,7 @@ export default function Header() {
         aria-label="LinkedIn"
         className={`
           pointer-events-auto
-          flex items-center justify-center w-10 h-10
+          flex items-center justify-center px-3 py-2
           rounded-full
           transition-all duration-500 ease-in-out
           ${
