@@ -12,6 +12,15 @@ const config: Config = {
         playfair: ["var(--font-playfair)", "serif"],
         inter: ["var(--font-inter)", "sans-serif"],
       },
+      keyframes: {
+        soundbar: {
+          "0%, 100%": { transform: "scaleY(0.4)" },
+          "50%": { transform: "scaleY(1)" },
+        },
+      },
+      animation: {
+        soundbar: "soundbar 0.8s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Accueil", href: "#hero" },
@@ -13,6 +15,8 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("hero");
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -73,7 +77,16 @@ export default function Header() {
 
         <div className="w-px h-4 bg-white/10 mx-1" />
 
-        {navLinks.map((link) => {
+        {!isHome && (
+          <Link
+            href="/"
+            className="flex items-center gap-1.5 px-4 py-2 rounded-full text-[13px] font-medium text-white/50 hover:text-white/90 hover:bg-white/5 transition-all"
+          >
+            ← Retour
+          </Link>
+        )}
+
+        {isHome && navLinks.map((link) => {
           const id = link.href.replace("#", "");
           return (
             <button
@@ -90,7 +103,7 @@ export default function Header() {
           );
         })}
 
-        <div className="w-px h-4 bg-white/10 mx-1" />
+        {isHome && <div className="w-px h-4 bg-white/10 mx-1" />}
 
         <a
           href="https://github.com/MarvinLaurac"
@@ -174,7 +187,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="w-[34px] h-[34px] flex items-center justify-center rounded-full text-white/70 border border-white/10 transition-all duration-300 hover:scale-[1.05] active:scale-[0.97]"
+              className="w-[40px] h-[40px] flex items-center justify-center rounded-full text-white/70 border border-white/10 transition-all duration-300 hover:scale-[1.05] active:scale-[0.97]"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 shrink-0">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -185,7 +198,7 @@ export default function Header() {
             <button
               onClick={() => setMenuOpen((v) => !v)}
               aria-label="Menu"
-              className="w-[34px] h-[34px] flex items-center justify-center rounded-full text-white/70 border border-white/10 transition-all duration-300 hover:scale-[1.05] active:scale-[0.97]"
+              className="w-[40px] h-[40px] flex items-center justify-center rounded-full text-white/70 border border-white/10 transition-all duration-300 hover:scale-[1.05] active:scale-[0.97]"
             >
               {menuOpen ? (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
@@ -209,7 +222,16 @@ export default function Header() {
               ${pillClass}
             `}
           >
-            {navLinks.map((link) => {
+            {!isHome && (
+              <Link
+                href="/"
+                className="w-full text-left px-4 py-3 rounded-xl text-[14px] font-medium tracking-wide text-white/50 hover:text-white/90 hover:bg-white/5 transition-all"
+                onClick={() => setMenuOpen(false)}
+              >
+                ← Retour
+              </Link>
+            )}
+            {isHome && navLinks.map((link) => {
               const id = link.href.replace("#", "");
               return (
                 <button

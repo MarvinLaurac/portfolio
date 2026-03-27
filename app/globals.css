@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,4 +7,8 @@
 body {
   background-color: #F0EDE8;
   color: #2D2D2D;
+}
+
+.font-brittany {
+  font-family: 'Dancing Script', cursive;
 }
