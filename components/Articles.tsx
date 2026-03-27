@@ -63,20 +63,9 @@ export default function Articles() {
   return (
     <section
       id="articles"
-      className="relative flex flex-col items-center py-40 px-4 overflow-hidden"
+      className="relative flex flex-col items-center py-24 px-4 overflow-hidden"
       style={{ background: "linear-gradient(160deg, #111111 0%, #1a1a1a 50%, #111111 100%)" }}
     >
-      {/* Dégradé haut */}
-      <div
-        className="pointer-events-none absolute top-0 left-0 right-0 z-10"
-        style={{ height: "160px", background: "linear-gradient(to bottom, #F0EDE8 0%, #F0EDE8 10%, rgba(17,17,17,0) 100%)" }}
-      />
-      {/* Dégradé bas */}
-      <div
-        className="pointer-events-none absolute bottom-0 left-0 right-0 z-10"
-        style={{ height: "160px", background: "linear-gradient(to top, #F0EDE8 0%, #F0EDE8 10%, rgba(17,17,17,0) 100%)" }}
-      />
-
       {/* Vignette radiale */}
       <div
         className="pointer-events-none absolute inset-0"
