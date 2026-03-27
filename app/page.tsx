@@ -22,12 +22,22 @@ export default function Home() {
       <main className="min-h-screen">
         {/* Illustration juste sous le header */}
         <div className="w-full px-3 sm:px-4 pt-20 sm:pt-24 max-w-6xl mx-auto">
+          {/* Mobile illustration (vertical) */}
+          <Image
+            src="/images/outils-agents-mobile.svg"
+            alt="Outils et agents pour entreprises"
+            width={600}
+            height={900}
+            className="block sm:hidden w-full h-auto rounded-xl"
+            priority
+          />
+          {/* Desktop illustration (horizontal) */}
           <Image
             src="/images/outils-agents-entreprises.svg"
             alt="Outils et agents pour entreprises"
             width={1200}
             height={600}
-            className="w-full h-auto rounded-xl sm:rounded-2xl"
+            className="hidden sm:block w-full h-auto rounded-2xl"
             priority
           />
           <div className="mt-3 sm:mt-4 h-px w-full bg-[#e1ccbb]" />
