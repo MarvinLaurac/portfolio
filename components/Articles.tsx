@@ -66,6 +66,17 @@ export default function Articles() {
       className="relative flex flex-col items-center py-24 px-4 overflow-hidden"
       style={{ background: "linear-gradient(160deg, #111111 0%, #1a1a1a 50%, #111111 100%)" }}
     >
+      {/* Dégradé haut — fondu depuis blanc */}
+      <div
+        className="pointer-events-none absolute top-0 left-0 right-0 h-24 z-10"
+        style={{ background: "linear-gradient(to bottom, #F0EDE8 0%, transparent 100%)" }}
+      />
+      {/* Dégradé bas — fondu vers blanc */}
+      <div
+        className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 z-10"
+        style={{ background: "linear-gradient(to top, #F0EDE8 0%, transparent 100%)" }}
+      />
+
       {/* Vignette radiale */}
       <div
         className="pointer-events-none absolute inset-0"
