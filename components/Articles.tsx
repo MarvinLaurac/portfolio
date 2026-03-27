@@ -9,22 +9,22 @@ const INITIAL_SHOW = 3;
 
 function ArticleCard({ a }: { a: Article }) {
   return (
-    <div className="flex gap-4 px-5 py-4 rounded-2xl bg-[#1a1a1a]/8 border border-[#1a1a1a]/10 backdrop-blur-sm hover:bg-[#1a1a1a]/12 hover:border-[#1a1a1a]/20 transition-colors duration-300">
-      <div className="shrink-0 w-10 h-10 rounded-full bg-[#1a1a1a]/10 flex items-center justify-center text-xl select-none">
+    <div className="flex gap-4 px-5 py-4 rounded-2xl bg-white/5 border border-white/8 hover:bg-white/8 hover:border-white/14 transition-all duration-300 group">
+      <div className="shrink-0 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-xl select-none">
         {a.avatar}
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-1.5">
-          <span className="font-inter font-semibold text-[13px] text-[#1a1a1a]">Marvin Laurac</span>
-          <span className="font-inter text-[12px] text-[#2D2D2D]/30">·</span>
-          <span className="font-inter text-[12px] text-[#2D2D2D]/40">{a.date}</span>
+          <span className="font-inter font-semibold text-[13px] text-white/90">Marvin Laurac</span>
+          <span className="font-inter text-[12px] text-white/20">·</span>
+          <span className="font-inter text-[12px] text-white/35">{a.date}</span>
           <span className={`ml-auto text-[10px] font-semibold px-2 py-0.5 rounded-full ${a.tagColor}`}>
             {a.tag}
           </span>
         </div>
-        <p className="font-inter text-[13px] text-[#2D2D2D]/75 leading-relaxed mb-3">{a.description}</p>
+        <p className="font-inter text-[13px] text-white/55 leading-relaxed mb-3">{a.description}</p>
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-1.5 text-[12px] text-[#2D2D2D]/35">
+          <div className="flex items-center gap-1.5 text-[12px] text-white/25">
             <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -32,7 +32,7 @@ function ArticleCard({ a }: { a: Article }) {
           </div>
           <Link
             href={`/articles/${a.slug}`}
-            className="ml-auto flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1a1a1a]/8 border border-[#1a1a1a]/10 text-[12px] font-medium text-[#1a1a1a]/60 hover:bg-[#1a1a1a]/14 hover:text-[#1a1a1a] transition-all duration-200 group"
+            className="ml-auto flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/8 border border-white/10 text-[12px] font-medium text-white/50 hover:bg-white/14 hover:text-white transition-all duration-200 group"
           >
             Lire l&apos;article
             <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -61,13 +61,41 @@ export default function Articles() {
   }, []);
 
   return (
-    <section id="articles" className="flex flex-col items-center py-20 px-4">
-      <h2 className="font-inter text-[11px] font-semibold tracking-[0.25em] uppercase text-[#2D2D2D] mb-10">
-        VEILLE TECHNOLOGIQUE
-      </h2>
+    <section
+      id="articles"
+      className="relative flex flex-col items-center py-24 px-4 overflow-hidden"
+      style={{ background: "linear-gradient(160deg, #111111 0%, #1a1a1a 50%, #111111 100%)" }}
+    >
+      {/* Vignette radiale */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,255,255,0.04) 0%, transparent 70%)",
+        }}
+      />
+      {/* Grain subtil */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.025]"
+        style={{
+          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
+          backgroundRepeat: "repeat",
+          backgroundSize: "128px",
+        }}
+      />
 
-      <div className="w-full max-w-2xl">
-        {/* Les 3 premières cartes avec effet pile */}
+      {/* Titre */}
+      <div className="relative flex flex-col items-center mb-10">
+        <p className="font-inter text-[10px] font-semibold tracking-[0.3em] uppercase text-white/30 mb-2">
+          Marvin Laurac
+        </p>
+        <h2 className="font-inter text-[13px] font-semibold tracking-[0.22em] uppercase text-white/80">
+          Veille Technologique
+        </h2>
+        <div className="mt-4 w-8 h-px bg-white/15" />
+      </div>
+
+      <div className="relative w-full max-w-2xl">
+        {/* Pile initiale */}
         <div ref={stackRef} className="relative flex flex-col">
           {articles.slice(0, INITIAL_SHOW).map((a, i) => (
             <div
@@ -89,7 +117,7 @@ export default function Articles() {
           ))}
         </div>
 
-        {/* Articles supplémentaires (slide down) */}
+        {/* Articles supplémentaires */}
         <div
           style={{
             overflow: "hidden",
@@ -117,7 +145,7 @@ export default function Articles() {
         <div className="flex justify-center mt-6">
           <button
             onClick={() => setExpanded(!expanded)}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1a1a1a]/8 border border-[#1a1a1a]/10 hover:bg-[#1a1a1a]/14 hover:border-[#1a1a1a]/20 transition-all duration-300 font-inter text-[12px] font-medium text-[#2D2D2D]/70 hover:text-[#2D2D2D] group"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/6 border border-white/10 hover:bg-white/10 hover:border-white/18 transition-all duration-300 font-inter text-[12px] font-medium text-white/45 hover:text-white/80 group"
           >
             {expanded ? (
               <>
@@ -129,7 +157,7 @@ export default function Articles() {
             ) : (
               <>
                 Voir plus
-                <span className="px-1.5 py-0.5 rounded-full bg-[#1a1a1a]/10 text-[11px] font-semibold">
+                <span className="px-1.5 py-0.5 rounded-full bg-white/10 text-[11px] font-semibold">
                   +{hiddenCount}
                 </span>
                 <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth={2}>
