@@ -15,7 +15,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Laurac Marvin Hugues",
+  metadataBase: new URL("https://marvinlaurac.com"),
+  title: "Marvin Laurac — Développeur & Veille IA",
   description: "Moins de tâches manuelles. Plus de valeur humaine.",
 };
 

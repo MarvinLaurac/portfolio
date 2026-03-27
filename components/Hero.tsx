@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-[60vh] px-4">
+    <section id="hero" className="flex flex-col items-center justify-center min-h-[60vh] px-4 pt-24">
       {/* Logo */}
       <Image
         src="/logo.png"
@@ -13,7 +13,7 @@ export default function Hero() {
         priority
       />
 
-      {/* Nom — une seule ligne */}
+      {/* Nom - une seule ligne */}
       <h1 className="text-center mb-3">
         <span className="font-inter font-bold text-[22px] md:text-[26px] tracking-[0.45em] uppercase">
           LAURAC
