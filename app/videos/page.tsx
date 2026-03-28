@@ -112,15 +112,14 @@ export default function VideosPage() {
             <p className="font-inter text-[13px] text-white/30 max-w-xs">
               D'autres enquêtes sont en cours de production. Abonne-toi pour ne rien rater.
             </p>
-            {/* URL future: https://www.youtube.com/@Marvinlaurac_plus */}
-            <div className="mt-5 flex flex-col items-center gap-1.5">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/5 text-white/20 font-inter text-[11px] font-semibold tracking-wide cursor-default select-none">
-                S'abonner sur YouTube
-              </span>
-              <span className="font-inter text-[9px] tracking-[0.15em] uppercase text-white/15">
-                Bientôt
-              </span>
-            </div>
+            <a
+              href="https://www.youtube.com/@Marvinlaurac_plus"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 text-white/40 font-inter text-[11px] font-semibold tracking-wide hover:border-white/20 hover:text-white/60 transition-all"
+            >
+              S'abonner sur YouTube
+            </a>
           </div>
         </div>
       </div>

@@ -103,21 +103,19 @@ export default function Header() {
           );
         })}
 
-        <div
+        <Link
+          href="/videos"
           className="
-            flex flex-col items-center px-4 py-1.5 rounded-full
+            flex items-center gap-1.5 px-4 py-2 rounded-full
+            text-[13px] font-semibold tracking-wide
             bg-gradient-to-r from-violet-500/20 to-pink-500/20
-            border border-white/10
-            cursor-default select-none
+            text-white/80 hover:text-white
+            border border-white/10 hover:border-white/20
+            transition-all duration-300 ease-in-out
           "
         >
-          <span className="font-inter text-[13px] font-semibold tracking-wide text-white/50">
-            Marvin<span className="text-violet-400/50">+</span>
-          </span>
-          <span className="font-inter text-[8px] tracking-[0.15em] uppercase text-white/20 leading-none">
-            Bientôt
-          </span>
-        </div>
+          Marvin<span className="text-violet-400">+</span>
+        </Link>
 
         <div className="w-px h-4 bg-white/10 mx-1" />
 
@@ -263,14 +261,13 @@ export default function Header() {
                 </button>
               );
             })}
-            <div className="w-full px-4 py-3 rounded-xl flex flex-col cursor-default select-none">
-              <span className="text-[14px] font-semibold tracking-wide text-white/30 flex items-center gap-1">
-                Marvin<span className="text-violet-400/40">+</span>
-              </span>
-              <span className="text-[9px] tracking-[0.15em] uppercase text-white/15 leading-none mt-0.5">
-                Bientôt
-              </span>
-            </div>
+            <Link
+              href="/videos"
+              onClick={() => setMenuOpen(false)}
+              className="w-full text-left px-4 py-3 rounded-xl text-[14px] font-semibold tracking-wide text-white/70 hover:text-white hover:bg-white/5 transition-all flex items-center gap-1"
+            >
+              Marvin<span className="text-violet-400">+</span>
+            </Link>
           </nav>
         )}
       </div>
