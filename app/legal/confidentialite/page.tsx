@@ -38,7 +38,7 @@ export default function Confidentialite() {
               Base légale du traitement
             </h2>
             <p>
-              Conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679), le traitement des données issues du contact par email repose sur votre consentement explicite lors de l'envoi du message.
+              Conformément au Règlement Général sur la Protection des Données (RGPD, Règlement UE 2016/679), le traitement des données issues du contact par email repose sur votre consentement explicite lors de l'envoi du message.
             </p>
 
             <h2 className="font-semibold text-[16px] text-[#1a1a1a] mt-8 mb-3">

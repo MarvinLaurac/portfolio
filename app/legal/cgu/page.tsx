@@ -23,7 +23,7 @@ export default function CGU() {
               Propriété intellectuelle
             </h2>
             <p>
-              L'ensemble des contenus présents sur ce site — textes, images, graphismes, agents IA, outils, code source — est la propriété exclusive de <strong>Marvin Laurac</strong>, protégé par les lois françaises et internationales relatives à la propriété intellectuelle. Toute reproduction, représentation, modification, publication ou transmission, totale ou partielle, sans autorisation écrite préalable de Marvin Laurac, est strictement interdite.
+              L'ensemble des contenus présents sur ce site (textes, images, graphismes, agents IA, outils, code source) est la propriété exclusive de <strong>Marvin Laurac</strong>, protégé par les lois françaises et internationales relatives à la propriété intellectuelle. Toute reproduction, représentation, modification, publication ou transmission, totale ou partielle, sans autorisation écrite préalable de Marvin Laurac, est strictement interdite.
             </p>
 
             <h2 className="font-semibold text-[16px] text-[#1a1a1a] mt-8 mb-3">
