@@ -1,6 +1,7 @@
 "use client";
 
 import AgentSpecs from "@/components/AgentSpecs";
+import Header from "@/components/Header";
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { Scale, Upload, FileText, X, Loader2, Download, ArrowLeft } from "lucide-react";
@@ -100,25 +101,9 @@ export default function LexPage() {
   const risk = result ? globalRisk(result.analysis.risk_clauses) : null;
 
   return (
-    <div className="min-h-screen bg-[#F0EDE8]">
-      {/* Header minimal */}
-      <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-5 px-4 pointer-events-none">
-        <nav className="pointer-events-auto flex items-center gap-1 px-2 py-2 rounded-full bg-[#1a1a1a]/80 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.15)] border border-white/5">
-          <Link
-            href="/"
-            className="flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-medium tracking-wide text-white/50 hover:text-white/90 hover:bg-white/5 transition-all"
-          >
-            <ArrowLeft size={13} />
-            Retour
-          </Link>
-          <div className="w-px h-4 bg-white/10 mx-1" />
-          <span className="flex items-center gap-2 px-4 py-2 text-[13px] font-medium tracking-wide text-white/90">
-            <Scale size={13} />
-            LEX
-          </span>
-        </nav>
-      </div>
-
+    <>
+      <Header />
+      <div className="min-h-screen bg-[#F0EDE8]">
       <div className="max-w-5xl mx-auto px-3 sm:px-4 pt-28 pb-10">
         <AgentSpecs
           icon="/images/icon-1.png"
@@ -356,5 +341,6 @@ export default function LexPage() {
         )}
       </div>
     </div>
+    </>
   );
 }
