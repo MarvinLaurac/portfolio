@@ -103,7 +103,23 @@ export default function Header() {
           );
         })}
 
-        {isHome && <div className="w-px h-4 bg-white/10 mx-1" />}
+        <div
+          className="
+            flex flex-col items-center px-4 py-1.5 rounded-full
+            bg-gradient-to-r from-violet-500/20 to-pink-500/20
+            border border-white/10
+            cursor-default select-none
+          "
+        >
+          <span className="font-inter text-[13px] font-semibold tracking-wide text-white/50">
+            Marvin<span className="text-violet-400/50">+</span>
+          </span>
+          <span className="font-inter text-[8px] tracking-[0.15em] uppercase text-white/20 leading-none">
+            Bientôt
+          </span>
+        </div>
+
+        <div className="w-px h-4 bg-white/10 mx-1" />
 
         <a
           href="https://github.com/MarvinLaurac"
@@ -247,6 +263,13 @@ export default function Header() {
                 </button>
               );
             })}
+            <Link
+              href="/videos"
+              onClick={() => setMenuOpen(false)}
+              className="w-full text-left px-4 py-3 rounded-xl text-[14px] font-semibold tracking-wide text-white/70 hover:text-white hover:bg-white/5 transition-all flex items-center gap-1"
+            >
+              Marvin<span className="text-violet-400">+</span>
+            </Link>
           </nav>
         )}
       </div>
