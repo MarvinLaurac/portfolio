@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import TopBanner from "@/components/TopBanner";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -27,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <TopBanner />
+        {children}
+      </body>
     </html>
   );
 }

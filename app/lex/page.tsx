@@ -1,7 +1,6 @@
 "use client";
 
 import AgentSpecs from "@/components/AgentSpecs";
-import NoticeBanner from "@/components/NoticeBanner";
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { Scale, Upload, FileText, X, Loader2, Download, ArrowLeft } from "lucide-react";
@@ -121,7 +120,6 @@ export default function LexPage() {
       </div>
 
       <div className="max-w-5xl mx-auto px-3 sm:px-4 pt-24 pb-10">
-        <NoticeBanner />
         <AgentSpecs
           icon="/images/icon-1.png"
           name="Lex"

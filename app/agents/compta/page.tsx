@@ -1,7 +1,6 @@
 "use client";
 import Header from "@/components/Header";
 import AgentSpecs from "@/components/AgentSpecs";
-import NoticeBanner from "@/components/NoticeBanner";
 
 import { useState, useRef } from "react";
 import Link from "next/link";
@@ -106,7 +105,6 @@ export default function Home() {
       <main className="min-h-screen bg-[#F8F7F4] text-[#1a1a1a]">
 
       <div className="max-w-5xl mx-auto px-3 sm:px-4 pt-24 pb-10">
-        <NoticeBanner />
         <AgentSpecs
           icon="/images/icon-3.png"
           name="Compta"

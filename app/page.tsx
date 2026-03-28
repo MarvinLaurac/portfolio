@@ -23,7 +23,7 @@ export default function Home() {
       <main className="min-h-screen">
 
         {/* Barre catégories */}
-        <div className="w-full pt-24 sm:pt-28 pb-3 overflow-x-auto scrollbar-hide">
+        <div className="w-full pt-28 sm:pt-32 pb-3 overflow-x-auto scrollbar-hide">
           <div className="flex items-center gap-2 px-3 sm:px-4 w-max mx-auto">
             {[
               {
