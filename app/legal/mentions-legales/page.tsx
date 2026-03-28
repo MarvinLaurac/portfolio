@@ -17,7 +17,7 @@ export default function MentionsLegales() {
             </h2>
             <p>
               Le site <strong>marvinlaurac.com</strong> est édité par :<br />
-              <strong>Marvin Laurac</strong>, auto-entrepreneur<br />
+              <strong>Marvin Laurac</strong><br />
               Paris, France<br />
               Email : <a href="mailto:marvinlaurac.pro@gmail.com" className="underline hover:text-[#1a1a1a] transition-colors">marvinlaurac.pro@gmail.com</a>
             </p>
