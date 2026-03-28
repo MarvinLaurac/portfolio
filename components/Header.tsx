@@ -55,7 +55,7 @@ export default function Header() {
     : "bg-[#1a1a1a]/80 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.15)] border border-white/5";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center items-center gap-2 pt-5 px-4 pointer-events-none">
+    <header className={`fixed left-0 right-0 z-50 flex justify-center items-center gap-2 px-4 pointer-events-none transition-all ${isHome ? "top-0 pt-5" : "top-[33px] pt-4"}`}>
 
       {/* ── Desktop ── */}
       <nav

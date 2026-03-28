@@ -1,5 +1,7 @@
 "use client";
 import Header from "@/components/Header";
+import AgentSpecs from "@/components/AgentSpecs";
+import NoticeBanner from "@/components/NoticeBanner";
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -55,7 +57,20 @@ export default function Home() {
       <Header />
       <main className="min-h-screen bg-[#F8F7F4] text-[#1a1a1a]">
 
-      <div className="max-w-4xl mx-auto px-3 sm:px-4 pt-24 pb-10">
+      <div className="max-w-5xl mx-auto px-3 sm:px-4 pt-24 pb-10">
+        <NoticeBanner />
+        <AgentSpecs
+          icon="/images/icon-6.png"
+          name="Veille"
+          tagline="Surveillance de sources web et rapport stratégique en temps réel"
+          modele="Claude Sonnet 4.6"
+          raisonnement={4}
+          vitesse={2}
+          input="URLs + Mots-clés"
+          output="Rapport stratégique"
+          description="Renseignez des URLs à surveiller et des mots-clés. L'agent scrape les sources, détecte les signaux forts et génère un rapport avec tendances, opportunités et menaces."
+          specs={["200 000 tokens de contexte", "Scraping multi-sources", "Signaux forts détectés", "Analyse SWOT intégrée"]}
+        />
         {!rapport ? (
           <>
             <p className="text-center text-[13px] text-[#1a1a1a]/50 mb-8">Renseignez des URLs à surveiller et des mots-clés. L&apos;agent analyse et génère un rapport stratégique.</p>

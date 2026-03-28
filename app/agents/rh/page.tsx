@@ -1,5 +1,7 @@
 "use client";
 import Header from "@/components/Header";
+import AgentSpecs from "@/components/AgentSpecs";
+import NoticeBanner from "@/components/NoticeBanner";
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -51,7 +53,20 @@ export default function Home() {
       <Header />
       <main className="min-h-screen bg-[#F8F7F4] text-[#1a1a1a]">
 
-      <div className="max-w-4xl mx-auto px-3 sm:px-4 pt-24 pb-10">
+      <div className="max-w-5xl mx-auto px-3 sm:px-4 pt-24 pb-10">
+        <NoticeBanner />
+        <AgentSpecs
+          icon="/images/icon-5.png"
+          name="RH"
+          tagline="Génération complète du dossier d'onboarding employé"
+          modele="Claude Sonnet 4.6"
+          raisonnement={3}
+          vitesse={3}
+          input="Formulaire employé"
+          output="5 documents"
+          description="Renseignez le profil du nouvel employé — l'agent génère automatiquement le contrat, l'email de bienvenue, le planning 30 jours, la checklist IT et les objectifs 90 jours."
+          specs={["200 000 tokens de contexte", "Contrat de travail généré", "Planning 30 jours structuré", "Objectifs 90 jours définis"]}
+        />
         {!dossier ? (
           <>
             <p className="text-center text-[13px] text-[#1a1a1a]/50 mb-8">Renseignez le profil du nouvel employé — l&apos;agent génère contrat, email, planning 30 jours, checklist IT et objectifs 90 jours.</p>

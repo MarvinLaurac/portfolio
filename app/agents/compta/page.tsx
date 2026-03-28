@@ -1,5 +1,7 @@
 "use client";
 import Header from "@/components/Header";
+import AgentSpecs from "@/components/AgentSpecs";
+import NoticeBanner from "@/components/NoticeBanner";
 
 import { useState, useRef } from "react";
 import Link from "next/link";
@@ -104,6 +106,19 @@ export default function Home() {
       <main className="min-h-screen bg-[#F8F7F4] text-[#1a1a1a]">
 
       <div className="max-w-5xl mx-auto px-3 sm:px-4 pt-24 pb-10">
+        <NoticeBanner />
+        <AgentSpecs
+          icon="/images/icon-3.png"
+          name="Compta"
+          tagline="Réconciliation bancaire et détection d'anomalies comptables"
+          modele="Claude Sonnet 4.6"
+          raisonnement={4}
+          vitesse={3}
+          input="Texte (factures + relevé)"
+          output="Rapport JSON"
+          description="Collez vos factures fournisseurs et votre relevé bancaire. L'agent détecte automatiquement les écarts, anomalies et transactions suspectes avec recommandations d'action."
+          specs={["200 000 tokens de contexte", "Détection automatique des écarts", "Classification des anomalies par urgence", "Recommandations comptables intégrées"]}
+        />
         {!rapport ? (
           <>
             <div className="text-center mb-10">

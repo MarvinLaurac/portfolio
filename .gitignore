@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# cache audio Solène (généré localement, ne pas commiter)
+.tts-cache/

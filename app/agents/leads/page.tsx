@@ -1,5 +1,7 @@
 "use client";
 import Header from "@/components/Header";
+import AgentSpecs from "@/components/AgentSpecs";
+import NoticeBanner from "@/components/NoticeBanner";
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -56,7 +58,20 @@ export default function Home() {
       <Header />
       <main className="min-h-screen bg-[#F8F7F4] text-[#1a1a1a]">
 
-      <div className="max-w-4xl mx-auto px-3 sm:px-4 pt-24 pb-10">
+      <div className="max-w-5xl mx-auto px-3 sm:px-4 pt-24 pb-10">
+        <NoticeBanner />
+        <AgentSpecs
+          icon="/images/icon-4.png"
+          name="Leads"
+          tagline="Qualification, scoring et enrichissement de prospects B2B"
+          modele="Claude Sonnet 4.6"
+          raisonnement={3}
+          vitesse={3}
+          input="Profil prospect"
+          output="Score + Email"
+          description="Renseignez un prospect — l'agent le score de 0 à 100, l'enrichit avec des données sectorielles et génère un email de prospection personnalisé prêt à envoyer."
+          specs={["200 000 tokens de contexte", "Score de qualification 0–100", "Email de prospection personnalisé", "Arguments de vente sur mesure"]}
+        />
         {!lead ? (
           <>
             <p className="text-center text-[13px] text-[#1a1a1a]/50 mb-8">Renseignez un lead — l&apos;agent le score, l&apos;enrichit et génère l&apos;email de prospection.</p>

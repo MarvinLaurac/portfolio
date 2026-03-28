@@ -1,5 +1,7 @@
 "use client";
 
+import AgentSpecs from "@/components/AgentSpecs";
+import NoticeBanner from "@/components/NoticeBanner";
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { Scale, Upload, FileText, X, Loader2, Download, ArrowLeft } from "lucide-react";
@@ -118,7 +120,20 @@ export default function LexPage() {
         </nav>
       </div>
 
-      <div className="max-w-xl mx-auto px-6 pt-32 pb-24">
+      <div className="max-w-5xl mx-auto px-3 sm:px-4 pt-24 pb-10">
+        <NoticeBanner />
+        <AgentSpecs
+          icon="/images/icon-1.png"
+          name="Lex"
+          tagline="Agent d'analyse juridique de contrats PDF"
+          modele="Claude Sonnet 4.6"
+          raisonnement={5}
+          vitesse={3}
+          input="PDF"
+          output="Rapport juridique"
+          description="Dépose un contrat PDF — LEX détecte les clauses à risque, calcule un score de risque global, liste les obligations et génère un rapport complet en 30 secondes."
+          specs={["200 000 tokens de contexte", "Score de risque 0–100", "Clauses risquées extraites", "Rapport téléchargeable"]}
+        />
         {/* Title */}
         <div className="mb-12">
           <h1 className="font-inter text-[11px] font-semibold tracking-[0.25em] uppercase text-[#2D2D2D] mb-3">

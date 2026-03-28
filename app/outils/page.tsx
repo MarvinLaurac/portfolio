@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 
 const OUTILS = [
   { icon: "/images/icon-6.png", name: "Veille", desc: "Surveille vos sources, détecte les signaux forts et génère un rapport stratégique en temps réel.", href: "/agents/veille" },
+  { icon: "/images/icon-7.png", name: "Benchmark IA", desc: "Choisissez votre niveau de raisonnement et vitesse — l'outil trouve le meilleur modèle pour vos agents.", href: "/outils/benchmark" },
 ];
 
 export default function TousLesOutils() {
@@ -36,7 +37,7 @@ export default function TousLesOutils() {
                       <p className="font-inter text-[12px] sm:text-[13px] text-[#1a1a1a]/50 leading-snug">{item.desc}</p>
                     </div>
                     <span className="shrink-0 bg-[#e8e8ed] text-[#007aff] font-semibold text-[13px] px-4 py-1.5 rounded-full hover:bg-[#dddde3] transition-colors">
-                      Obtenir
+                      En savoir plus
                     </span>
                   </div>
                   {showLine && <div className="h-px w-full bg-[#e1ccbb]" />}

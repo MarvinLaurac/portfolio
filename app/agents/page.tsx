@@ -40,7 +40,7 @@ export default function TousLesAgents() {
                       <p className="font-inter text-[12px] sm:text-[13px] text-[#1a1a1a]/50 leading-snug">{item.desc}</p>
                     </div>
                     <span className="shrink-0 bg-[#e8e8ed] text-[#007aff] font-semibold text-[13px] px-4 py-1.5 rounded-full hover:bg-[#dddde3] transition-colors">
-                      Obtenir
+                      En savoir plus
                     </span>
                   </div>
                   {showLine && <div className="h-px w-full bg-[#e1ccbb]" />}
