@@ -6,12 +6,12 @@ import { Play } from "lucide-react";
 
 const videos = [
   {
-    id: "91AJ0cpgLlQ",
-    title: "Pourquoi Apple a cédé à Google (et c'est inquiétant)",
+    id: "5dHrWkf_4PY",
+    title: "Apple choisit Gemini : ce que personne ne t'a dit",
     description: "Apple signe avec Google pour intégrer Gemini dans l'iPhone. Une enquête sur l'accord qui change tout.",
     category: "Enquête",
     duration: "À venir",
-    thumbnail: `https://img.youtube.com/vi/91AJ0cpgLlQ/maxresdefault.jpg`,
+    thumbnail: `https://img.youtube.com/vi/5dHrWkf_4PY/maxresdefault.jpg`,
   },
 ];
 
@@ -112,7 +112,7 @@ export default function VideosPage() {
             <p className="font-inter text-[13px] text-white/30 max-w-xs">
               D'autres enquêtes sont en cours de production. Abonne-toi pour ne rien rater.
             </p>
-            {/* URL future: https://www.youtube.com/@marvinlauracplus */}
+            {/* URL future: https://www.youtube.com/@Marvinlaurac_plus */}
             <div className="mt-5 flex flex-col items-center gap-1.5">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/5 text-white/20 font-inter text-[11px] font-semibold tracking-wide cursor-default select-none">
                 S'abonner sur YouTube
