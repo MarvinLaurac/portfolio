@@ -205,6 +205,12 @@ export default function Home() {
           >
             marvinlaurac.pro@gmail.com
           </a>
+          <div className="flex items-center gap-4 mt-6 flex-wrap justify-center">
+            <a href="/legal/mentions-legales" className="font-inter text-[11px] text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors">Mentions légales</a>
+            <a href="/legal/confidentialite" className="font-inter text-[11px] text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors">Confidentialité</a>
+            <a href="/legal/cgu" className="font-inter text-[11px] text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors">CGU</a>
+            <a href="/legal/cookies" className="font-inter text-[11px] text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors">Cookies</a>
+          </div>
         </section>
 
         {/* Footer dégradé */}
