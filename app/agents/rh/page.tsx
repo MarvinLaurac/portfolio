@@ -52,7 +52,7 @@ export default function Home() {
       <Header />
       <main className="min-h-screen bg-[#F8F7F4] text-[#1a1a1a]">
 
-      <div className="max-w-5xl mx-auto px-3 sm:px-4 pt-24 pb-10">
+      <div className="max-w-5xl mx-auto px-3 sm:px-4 pt-28 pb-10">
         <AgentSpecs
           icon="/images/icon-5.png"
           name="RH"

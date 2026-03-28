@@ -43,7 +43,7 @@ const VITESSE_LABEL: Record<number, string> = { 1: "Lente", 2: "Moyenne", 3: "Ra
 
 export default function AgentSpecs({ icon, name, tagline, modele, raisonnement, vitesse, input, output, specs, description }: AgentSpecsProps) {
   return (
-    <div className="bg-white rounded-2xl border border-black/8 p-5 sm:p-6 mb-6">
+    <div className="rounded-2xl border border-black/8 p-5 sm:p-6 mb-6" style={{ backgroundColor: "#e8e3e0" }}>
       {/* Header row */}
       <div className="flex items-start gap-4 mb-5">
         <Image src={icon} alt={name} width={56} height={56} className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover shrink-0" />
@@ -57,7 +57,7 @@ export default function AgentSpecs({ icon, name, tagline, modele, raisonnement, 
       </div>
 
       {/* Metrics grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 rounded-xl border border-black/8 overflow-hidden mb-5 divide-x divide-y sm:divide-y-0 divide-black/8">
+      <div className="grid grid-cols-2 sm:grid-cols-4 rounded-xl border border-black/10 overflow-hidden mb-5 divide-x divide-y sm:divide-y-0 divide-black/10 bg-white/50">
         {[
           { label: "RAISONNEMENT", visual: <Dots count={raisonnement} />, value: RAISONNEMENT_LABEL[raisonnement] },
           { label: "VITESSE",       visual: <Bolts count={vitesse} />,      value: VITESSE_LABEL[vitesse] },

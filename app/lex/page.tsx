@@ -119,7 +119,7 @@ export default function LexPage() {
         </nav>
       </div>
 
-      <div className="max-w-5xl mx-auto px-3 sm:px-4 pt-24 pb-10">
+      <div className="max-w-5xl mx-auto px-3 sm:px-4 pt-28 pb-10">
         <AgentSpecs
           icon="/images/icon-1.png"
           name="Lex"
