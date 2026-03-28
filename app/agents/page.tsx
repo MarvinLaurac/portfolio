@@ -3,11 +3,11 @@ import Link from "next/link";
 import Header from "@/components/Header";
 
 const AGENTS = [
-  { icon: "/images/icon-1.png", name: "Lex", desc: "analyse automatiquement n'importe quel contrat PDF et génère un rapport juridique", href: "/lex" },
-  { icon: "/images/icon-2.png", name: "Contrats", desc: "analyse automatiquement n'importe quel contrat PDF et génère un rapport juridique", href: "/agents/contrats" },
-  { icon: "/images/icon-3.png", name: "Compta", desc: "analyse automatiquement n'importe quel contrat PDF et génère un rapport juridique", href: "/agents/compta" },
-  { icon: "/images/icon-4.png", name: "Leads", desc: "analyse automatiquement n'importe quel contrat PDF et génère un rapport juridique", href: "/agents/leads" },
-  { icon: "/images/icon-5.png", name: "RH", desc: "analyse automatiquement n'importe quel contrat PDF et génère un rapport juridique", href: "/agents/rh" },
+  { icon: "/images/icon-1.png", name: "Lex", desc: "Analyse n'importe quel contrat PDF et génère un rapport juridique complet avec les risques.", href: "/lex" },
+  { icon: "/images/icon-2.png", name: "Contrats", desc: "Détecte les clauses abusives, dates clés et obligations dans vos contrats en quelques secondes.", href: "/agents/contrats" },
+  { icon: "/images/icon-3.png", name: "Compta", desc: "Réconcilie vos factures fournisseurs avec votre relevé bancaire et identifie les anomalies.", href: "/agents/compta" },
+  { icon: "/images/icon-4.png", name: "Leads", desc: "Score, enrichit et qualifie vos prospects, puis génère l'email de prospection personnalisé.", href: "/agents/leads" },
+  { icon: "/images/icon-5.png", name: "RH", desc: "Génère le dossier d'onboarding complet : contrat, email, planning 30 jours et objectifs 90 jours.", href: "/agents/rh" },
 ];
 
 export default function TousLesAgents() {
@@ -33,12 +33,15 @@ export default function TousLesAgents() {
               const showLine = i < AGENTS.length - 2;
               return (
                 <a key={item.name} href={item.href} className="flex flex-col hover:bg-black/[0.02] transition-colors px-1 sm:px-2">
-                  <div className="flex items-start gap-3 sm:gap-4 py-4 sm:py-5">
+                  <div className="flex items-center gap-3 sm:gap-4 py-4 sm:py-5">
                     <Image src={item.icon} alt={item.name} width={80} height={80} className="w-14 h-14 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl object-cover shrink-0" />
-                    <div className="flex flex-col justify-center min-w-0">
+                    <div className="flex flex-col justify-center min-w-0 flex-1">
                       <h3 className="font-inter font-bold text-[16px] sm:text-[18px] text-[#1a1a1a] mb-1">{item.name}</h3>
                       <p className="font-inter text-[12px] sm:text-[13px] text-[#1a1a1a]/50 leading-snug">{item.desc}</p>
                     </div>
+                    <span className="shrink-0 bg-[#e8e8ed] text-[#007aff] font-semibold text-[13px] px-4 py-1.5 rounded-full hover:bg-[#dddde3] transition-colors">
+                      Obtenir
+                    </span>
                   </div>
                   {showLine && <div className="h-px w-full bg-[#e1ccbb]" />}
                 </a>
