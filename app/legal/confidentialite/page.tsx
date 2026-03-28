@@ -16,7 +16,7 @@ export default function Confidentialite() {
               Responsable du traitement
             </h2>
             <p>
-              Marvin Laurac, auto-entrepreneur, Paris, France.<br />
+              Marvin Laurac, Paris, France.<br />
               Contact : <a href="mailto:marvinlaurac.pro@gmail.com" className="underline hover:text-[#1a1a1a] transition-colors">marvinlaurac.pro@gmail.com</a>
             </p>
 
