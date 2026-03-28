@@ -263,13 +263,14 @@ export default function Header() {
                 </button>
               );
             })}
-            <Link
-              href="/videos"
-              onClick={() => setMenuOpen(false)}
-              className="w-full text-left px-4 py-3 rounded-xl text-[14px] font-semibold tracking-wide text-white/70 hover:text-white hover:bg-white/5 transition-all flex items-center gap-1"
-            >
-              Marvin<span className="text-violet-400">+</span>
-            </Link>
+            <div className="w-full px-4 py-3 rounded-xl flex flex-col cursor-default select-none">
+              <span className="text-[14px] font-semibold tracking-wide text-white/30 flex items-center gap-1">
+                Marvin<span className="text-violet-400/40">+</span>
+              </span>
+              <span className="text-[9px] tracking-[0.15em] uppercase text-white/15 leading-none mt-0.5">
+                Bientôt
+              </span>
+            </div>
           </nav>
         )}
       </div>
