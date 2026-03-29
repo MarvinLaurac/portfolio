@@ -36,7 +36,7 @@ export default function VideosPage() {
               {videos[0].description}
             </p>
             <a
-              href={`https://www.youtube.com/watch?v=${videos[0].id}`}
+              href={`https://youtu.be/${videos[0].id}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#0d0d0d] font-inter text-[12px] font-semibold tracking-wide hover:bg-white/90 transition-all"
@@ -57,7 +57,7 @@ export default function VideosPage() {
             {videos.map((v) => (
               <a
                 key={v.id}
-                href={`https://www.youtube.com/watch?v=${v.id}`}
+                href={`https://youtu.be/${v.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block"
