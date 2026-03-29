@@ -18,13 +18,14 @@ export default function VideosPage() {
     <>
       <Header />
       <div className="min-h-screen bg-[#0d0d0d]">
-        {/* Hero banner — première vidéo */}
-        <div className="relative w-full h-[45vh] sm:h-[60vh] overflow-hidden" style={{ background: videos[0].gradient }}>
-          {/* Gradient overlay */}
+        {/* Hero banner */}
+        <div
+          className="relative w-full h-[45vh] sm:h-[60vh] overflow-hidden"
+          style={{ background: videos[0].gradient }}
+        >
           <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-[#0d0d0d]/40 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d]/80 via-transparent to-transparent" />
 
-          {/* Hero content */}
           <div className="absolute bottom-0 left-0 px-4 sm:px-10 pb-8 sm:pb-12 max-w-xl">
             <span className="inline-block font-inter text-[10px] font-semibold tracking-[0.2em] uppercase text-white/40 mb-3">
               {videos[0].category}
@@ -47,7 +48,7 @@ export default function VideosPage() {
           </div>
         </div>
 
-        {/* Grid section */}
+        {/* Grid */}
         <div className="max-w-6xl mx-auto px-4 sm:px-10 py-10">
           <h2 className="font-inter text-[11px] font-semibold tracking-[0.2em] uppercase text-white/30 mb-5">
             Toutes les vidéos
@@ -62,23 +63,21 @@ export default function VideosPage() {
                 rel="noopener noreferrer"
                 className="group block"
               >
-                {/* Thumbnail */}
-                <div className="relative aspect-video rounded-lg overflow-hidden mb-3" style={{ background: v.gradient }}>
-                  {/* Play overlay on hover */}
+                <div
+                  className="relative aspect-video rounded-lg overflow-hidden mb-3"
+                  style={{ background: v.gradient }}
+                >
                   <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/30 transition-all duration-300">
                     <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300">
                       <Play size={14} fill="#0d0d0d" className="ml-0.5" />
                     </div>
                   </div>
-                  {/* Category badge */}
                   <div className="absolute top-2 left-2">
                     <span className="font-inter text-[9px] font-semibold tracking-[0.15em] uppercase bg-white/10 backdrop-blur-sm text-white/70 px-2 py-1 rounded-full">
                       {v.category}
                     </span>
                   </div>
                 </div>
-
-                {/* Info */}
                 <p className="font-inter text-[13px] font-medium text-white/80 group-hover:text-white transition-colors leading-snug">
                   {v.title}
                 </p>
@@ -89,7 +88,7 @@ export default function VideosPage() {
             ))}
           </div>
 
-          {/* Coming soon placeholder */}
+          {/* Coming soon */}
           <div className="mt-10 border border-white/5 rounded-lg p-8 flex flex-col items-center text-center">
             <p className="font-inter text-[11px] font-semibold tracking-[0.2em] uppercase text-white/20 mb-2">
               Bientôt disponible
@@ -106,50 +105,6 @@ export default function VideosPage() {
               S'abonner sur YouTube
             </a>
           </div>
-        </div>
-      </div>
-    </>
-  );
-}
-   </div>
-        </div>
-      </div>
-    </>
-  );
-}
-onner sur YouTube
-            </a>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-   </div>
-        </div>
-      </div>
-    </>
-  );
-}
-</div>
-    </>
-  );
-}
-   </div>
-        </div>
-      </div>
-    </>
-  );
-}
-onner sur YouTube
-            </a>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-   </div>
         </div>
       </div>
     </>
