@@ -1,17 +1,15 @@
 "use client";
 
 import Header from "@/components/Header";
-import Image from "next/image";
 import { Play } from "lucide-react";
 
 const videos = [
   {
-    id: "5dHrWkf_4PY",
+    id: "-A_XfVD9Qic",
     title: "Apple choisit Gemini : ce que personne ne t'a dit",
     description: "Apple signe avec Google pour intégrer Gemini dans l'iPhone. Une enquête sur l'accord qui change tout.",
     category: "Enquête",
-    duration: "À venir",
-    thumbnail: `https://img.youtube.com/vi/5dHrWkf_4PY/maxresdefault.jpg`,
+    gradient: "linear-gradient(135deg, #1a0533 0%, #0d1a2e 50%, #0a0a0a 100%)",
   },
 ];
 
@@ -21,14 +19,7 @@ export default function VideosPage() {
       <Header />
       <div className="min-h-screen bg-[#0d0d0d]">
         {/* Hero banner — première vidéo */}
-        <div className="relative w-full h-[45vh] sm:h-[60vh] overflow-hidden">
-          <Image
-            src={videos[0].thumbnail}
-            alt={videos[0].title}
-            fill
-            className="object-cover object-center"
-            priority
-          />
+        <div className="relative w-full h-[45vh] sm:h-[60vh] overflow-hidden" style={{ background: videos[0].gradient }}>
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-[#0d0d0d]/40 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d]/80 via-transparent to-transparent" />
@@ -72,13 +63,7 @@ export default function VideosPage() {
                 className="group block"
               >
                 {/* Thumbnail */}
-                <div className="relative aspect-video rounded-lg overflow-hidden bg-white/5 mb-3">
-                  <Image
-                    src={v.thumbnail}
-                    alt={v.title}
-                    fill
-                    className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
-                  />
+                <div className="relative aspect-video rounded-lg overflow-hidden mb-3" style={{ background: v.gradient }}>
                   {/* Play overlay on hover */}
                   <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/30 transition-all duration-300">
                     <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300">
@@ -121,6 +106,50 @@ export default function VideosPage() {
               S'abonner sur YouTube
             </a>
           </div>
+        </div>
+      </div>
+    </>
+  );
+}
+   </div>
+        </div>
+      </div>
+    </>
+  );
+}
+onner sur YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+   </div>
+        </div>
+      </div>
+    </>
+  );
+}
+</div>
+    </>
+  );
+}
+   </div>
+        </div>
+      </div>
+    </>
+  );
+}
+onner sur YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+   </div>
         </div>
       </div>
     </>
