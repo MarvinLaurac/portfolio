@@ -22,7 +22,7 @@ export async function GET() {
       return {
         id,
         title: title.replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'"),
-        thumbnail: `https://img.youtube.com/vi/${id}/mqdefault.jpg`,
+        thumbnail: `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
         url: `https://www.youtube.com/shorts/${id}`,
       };
     });
