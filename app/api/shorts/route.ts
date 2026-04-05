@@ -27,7 +27,7 @@ export async function GET() {
 
     const xml = await rss.text();
 
-    const entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)];
+    const entries = Array.from(xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g));
 
     const candidates = entries.map((m) => {
       const block = m[1];
