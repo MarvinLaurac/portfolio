@@ -5,12 +5,12 @@ const CHANNEL_ID = "UCtC3VPyF3Rz4pSb4lTa9MCw";
 async function isShort(id: string): Promise<boolean> {
   try {
     const res = await fetch(`https://www.youtube.com/shorts/${id}`, {
-      method: "HEAD",
-      redirect: "manual",
+      method: "GET",
+      redirect: "follow",
+      headers: { "User-Agent": "Mozilla/5.0" },
     });
-    // If it redirects to /watch, it's not a short
-    const location = res.headers.get("location") ?? "";
-    return !location.includes("/watch");
+    // After following redirects, if final URL is /watch it's not a short
+    return !res.url.includes("/watch");
   } catch {
     return false;
   }
