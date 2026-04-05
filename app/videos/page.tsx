@@ -197,6 +197,9 @@ export default function VideosPage() {
           </div>
         </div>
 
+        {/* Shorts */}
+        <ShortsRow />
+
         {/* Grid */}
         <div className="max-w-6xl mx-auto px-4 sm:px-10 py-10">
           <h2 className="font-inter text-[11px] font-semibold tracking-[0.2em] uppercase text-white/30 mb-5">
@@ -240,9 +243,6 @@ export default function VideosPage() {
             ))}
           </div>
         </div>
-
-        {/* Shorts */}
-        <ShortsRow />
 
         {/* Coming soon */}
         <div className="max-w-6xl mx-auto px-4 sm:px-10 pb-14">

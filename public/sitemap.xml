@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://marvinlaurac.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://marvinlaurac.com/videos</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/-A_XfVD9Qic/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Apple choisit Gemini : ce que personne ne t'a dit</video:title>
+      <video:description>Apple signe avec Google pour intégrer Gemini dans l'iPhone. Une enquête sur l'accord qui change tout.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=-A_XfVD9Qic</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/-A_XfVD9Qic</video:player_loc>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/jMgKyGi_FHA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Mistral écrase les géants : l'Europe vient de gagner une bataille de l'IA</video:title>
+      <video:description>Mistral repousse les limites et s'impose face aux géants américains. Décryptage d'une victoire européenne.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=jMgKyGi_FHA</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/jMgKyGi_FHA</video:player_loc>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/R5wqeBblmdw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>MCP franchit 97 millions de téléchargements mensuels SDK</video:title>
+      <video:description>Le protocole MCP dépasse les 97 millions de téléchargements mensuels. Décryptage de cette explosion.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=R5wqeBblmdw</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/R5wqeBblmdw</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://marvinlaurac.com/agents</loc>

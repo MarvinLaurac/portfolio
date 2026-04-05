@@ -1,3 +1,54 @@
 User-agent: *
 Allow: /
 Sitemap: https://marvinlaurac.com/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Video
+Allow: /videos
+
+# Bing / Microsoft
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# ChatGPT / OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Claude / Anthropic
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Gemini / Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://marvinlaurac.com/sitemap.xml
