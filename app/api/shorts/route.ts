@@ -2,6 +2,20 @@ import { NextResponse } from "next/server";
 
 const CHANNEL_ID = "UCtC3VPyF3Rz4pSb4lTa9MCw";
 
+async function isShort(id: string): Promise<boolean> {
+  try {
+    const res = await fetch(`https://www.youtube.com/shorts/${id}`, {
+      method: "HEAD",
+      redirect: "manual",
+    });
+    // If it redirects to /watch, it's not a short
+    const location = res.headers.get("location") ?? "";
+    return !location.includes("/watch");
+  } catch {
+    return false;
+  }
+}
+
 export async function GET() {
   try {
     const rss = await fetch(
@@ -13,9 +27,9 @@ export async function GET() {
 
     const xml = await rss.text();
 
-    const entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].slice(0, 11);
+    const entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)];
 
-    const shorts = entries.map((m) => {
+    const candidates = entries.map((m) => {
       const block = m[1];
       const id = (block.match(/<yt:videoId>([^<]+)<\/yt:videoId>/) || [])[1] ?? "";
       const title = (block.match(/<title>([^<]+)<\/title>/) || [])[1] ?? "";
@@ -26,6 +40,13 @@ export async function GET() {
         url: `https://www.youtube.com/shorts/${id}`,
       };
     });
+
+    // Check each video in parallel — filter out non-shorts
+    const results = await Promise.all(
+      candidates.map(async (v) => ({ v, short: await isShort(v.id) }))
+    );
+
+    const shorts = results.filter((r) => r.short).map((r) => r.v).slice(0, 11);
 
     return NextResponse.json(shorts);
   } catch {
