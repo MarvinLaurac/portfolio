@@ -17,9 +17,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://marvinlaurac.com"),
-  title: "Marvin Laurac — Solutions IA pour entreprises",
+  title: "Marvin Laurac — Le monde de demain",
   description:
-    "Solutions intelligentes pour automatiser, simplifier et accélérer le travail des entreprises. Agents IA, outils métiers et veille sur l'intelligence artificielle de demain.",
+    "Apprendre ensemble avec le nouveau moyen de communication qu'est la vidéo. Agents IA, outils métiers et veille sur l'intelligence artificielle de demain.",
   keywords: [
     "agents IA",
     "automatisation entreprise",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     "veille technologique IA",
   ],
   openGraph: {
-    title: "Marvin Laurac — Solutions IA pour entreprises",
+    title: "Marvin Laurac — Le monde de demain",
     description:
-      "Solutions intelligentes pour automatiser, simplifier et accélérer le travail des entreprises. Agents IA, outils métiers et veille sur l'intelligence artificielle de demain.",
+      "Apprendre ensemble avec le nouveau moyen de communication qu'est la vidéo. Agents IA, outils métiers et veille sur l'intelligence artificielle de demain.",
     url: "https://marvinlaurac.com",
     siteName: "Marvin Laurac",
     type: "website",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marvin Laurac — Solutions IA pour entreprises",
+    title: "Marvin Laurac — Le monde de demain",
     description:
-      "Solutions intelligentes pour automatiser, simplifier et accélérer le travail des entreprises. Agents IA, outils métiers et veille sur l'intelligence artificielle de demain.",
+      "Apprendre ensemble avec le nouveau moyen de communication qu'est la vidéo. Agents IA, outils métiers et veille sur l'intelligence artificielle de demain.",
   },
   robots: {
     index: true,
@@ -61,7 +61,7 @@ const jsonLd = {
       url: "https://marvinlaurac.com",
       name: "Marvin Laurac",
       description:
-        "Solutions intelligentes pour automatiser, simplifier et accélérer le travail des entreprises.",
+        "Apprendre ensemble avec le nouveau moyen de communication qu'est la vidéo.",
       inLanguage: "fr-FR",
     },
     {
